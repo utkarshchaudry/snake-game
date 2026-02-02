@@ -1,0 +1,109 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #101418;
+  color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.app {
+  width: min(720px, 100%);
+  display: grid;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.subtitle {
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+.scoreboard {
+  background: #1f2a35;
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.game-panel {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+#board {
+  width: min(480px, 100%);
+  aspect-ratio: 1 / 1;
+  border: 2px solid #2d3c4a;
+  background: #0a0f14;
+}
+
+.status {
+  min-height: 24px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.controls button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #2d3c4a;
+  background: #18222c;
+  color: inherit;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dpad {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.dpad-row {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scoreboard {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+}
